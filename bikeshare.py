@@ -159,7 +159,7 @@ def user_stats(df):
     # TO DO: Display counts of gender
     try:
         gender = df['Gender'].value_counts()
-        print('These are the gender counts:\n', gender)
+        print('These are the gender counts: {}\n'.format(gender))
     except KeyError:
         print('There is no gender types supported with this selection.')
 
