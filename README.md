@@ -1,15 +1,19 @@
 ### Date created
-Include the date you created this project and README file.
+4/24/2020 - Explore US Bikeshare Data
+4/30/2020 - README.md creation
 
 ### Project Title
-Replace the Project Title
+Explore US Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+This python program ask the user a series of question, and then performs statistical analysis to return
+a series of answers to questions that the user wanted to see.
 
 ### Files used
-Include the files used
+chicago.csv
+washington.csv
+new_york_city.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Only credit is given to the Udacity team for this nanodegree to assigning this project to me.
 
