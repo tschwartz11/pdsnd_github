@@ -32,7 +32,7 @@ def get_filters():
             continue
         else:
             break
-            
+
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         day = input("Which day of the week would you like to filter by: all, monday, tuesday, wednesday, thursday, friday, saturday, sunday: ").lower()
@@ -57,7 +57,7 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     df = pd.read_csv(CITY_DATA[city])
-    
+
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
@@ -72,7 +72,7 @@ def load_data(city, month, day):
         month = months.index(month) + 1
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
-        
+
         # filter by day of week if applicable
         if day != 'all':
             # filter by day of week to create the new dataframe
@@ -111,7 +111,7 @@ def station_stats(df):
     # TO DO: display most commonly used start station
     common_station = df['Start Station'].mode()[0]
     print('The most common starting station:', common_station)
-    
+
     # TO DO: display most commonly used end station
     common_end = df['End Station'].mode()[0]
     print('The most common ending station:', common_end)
@@ -120,7 +120,7 @@ def station_stats(df):
     combine_stations = df['Start Station'] + "*" + df['End Station']
     common_station = combine_stations.value_counts().idxmax()
     print('Most frequent used combinations are:\n{} \nto\n{}'.format(common_station.split('*')[0], common_station.split('*')[1]))
-    
+
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -162,7 +162,7 @@ def user_stats(df):
         print('These are the gender counts:\n', gender)
     except KeyError:
         print('There is no gender types supported with this selection.')
-    
+
     # TO DO: Display earliest, most recent, and most common year of birth
     try:
         early_year = df['Birth Year'].min()
@@ -180,7 +180,7 @@ def user_stats(df):
         print('Most common year is:', most_common)
     except KeyError:
         print('There is not a most common year for this month.')
-  
+
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -197,13 +197,17 @@ def raw_view(df):
             continue
         else:
             break
-        
 
-                       
-                  
 
-    
+
+
+
+
 def main():
+    """
+    This is the main function where all functions need to be included here for the
+    code to run smoothly and not forget anything 
+    """
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
