@@ -16,6 +16,11 @@ write a script that takes in raw input to create an interactive experience in th
 * washington.csv
 * new_york_city.csv
 
+### Software used
+* Microsoft Excel
+* Python
+
+
 ### Credits
 Only credit is given to the Udacity team for this nanodegree to assigning this project to me.
 
